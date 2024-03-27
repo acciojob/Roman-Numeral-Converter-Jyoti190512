@@ -10,12 +10,14 @@ function convertToRoman(num) {
     };
 
   //your code here
-	  let result = '';
-  
-    for (let i = 6; i >= 0; i--) {
-        while (num >= obj[i][1]) {
-            result += obj[i][0];
-            num -= obj[i][1];
+	
+
+    let result = '';
+
+    for (let value in obj) {
+        while (num >= value) {
+            result += obj[value];
+            num -= value;
         }
     }
 
