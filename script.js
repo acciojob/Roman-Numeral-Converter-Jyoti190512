@@ -13,8 +13,8 @@ function convertToRoman(num) {
 	 let result = '';
   
     for (let i = Object.keys(obj).length - 1; i >= 0; i--) {
-        while (num >= obj[i][1]) {
-            result += obj[i][0];
+        while (num >= obj[i][1]) { //14>=10 true
+            result += obj[i][0];   //
             num -= obj[i][1];
         }
     }
