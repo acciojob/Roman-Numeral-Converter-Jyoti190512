@@ -15,9 +15,9 @@ function convertToRoman(num) {
     let result = '';
 
     for (let value in obj) {
-        while (num >= value) {
-            result += obj[value];
-            num -= value;
+        while (num >= obj[value][1]) { // use obj[value][1] to get the number
+            result += obj[value][0]; // use obj[value][0] to get the Roman numeral
+            num -= obj[value][1]; // subtract the number from num
         }
     }
 
