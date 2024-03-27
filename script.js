@@ -12,12 +12,12 @@ function convertToRoman(num) {
   //your code here
 	 let result = '';
 
-    for (let value in obj) {
+    arr.forEach(([value, roman]) => {
         while (num >= value) {
-            result += obj[value];
+            result += roman;
             num -= value;
         }
-    }
+    });
 
     return result;
 
